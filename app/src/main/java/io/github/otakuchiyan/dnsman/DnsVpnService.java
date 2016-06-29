@@ -52,9 +52,9 @@ public class DnsVpnService extends VpnService implements ValueConstants{
                 Enumeration<InetAddress> addresses = ifaces.nextElement().getInetAddresses();
                 while (addresses.hasMoreElements()) {
                     String addr = addresses.nextElement().getHostAddress();
-                    if (!addr.equals("127.0.0.1") &&
-                            !addr.equals("0.0.0.0") &&
-                            !addr.equals("::1%1") &&
+                    if (!"127.0.0.1".equals(addr) &&
+                            !"0.0.0.0".equals(addr) &&
+                            !"::1%1".equals(addr) &&
                             //Escaping IPv6
                             addr.charAt(5) != ':') {
                         return addr;
@@ -87,7 +87,7 @@ public class DnsVpnService extends VpnService implements ValueConstants{
                     }
 
                     //If no suffix
-                    if (real_addr.equals("")) {
+                    if ("".equals(real_addr)) {
                         real_addr = addr;
                     }
 
@@ -100,10 +100,10 @@ public class DnsVpnService extends VpnService implements ValueConstants{
                     Builder vpn = new Builder();
                     vpn.setSession("DnsVpnService")
                             .addAddress(real_addr, 24);
-                    if (!dns1.equals("")) {
+                    if (!"".equals(dns1)) {
                         vpn.addDnsServer(dns1);
                     }
-                    if (!dns2.equals("")) {
+                    if (!"".equals(dns2)) {
                         vpn.addDnsServer(dns2);
                     }
                     fd = vpn.establish();
