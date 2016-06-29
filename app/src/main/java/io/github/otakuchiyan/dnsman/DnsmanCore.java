@@ -18,14 +18,14 @@ import java.util.Map;
 import java.util.Set;
 
 public class DnsmanCore implements ValueConstants{
-    public static ArrayList<NetworkInfo> supportedNetInfoList = new ArrayList<>();
+    public static List<NetworkInfo> supportedNetInfoList = new ArrayList<>();
 
     //Don't use NetworkInfo as key because it's complex structure
-    public static HashMap<String, Integer> info2resMap = new HashMap<>();
-    public static HashMap<String, String> info2interfaceMap = new HashMap<>();
-    public static HashMap<String, Integer> method2resMap = new HashMap<>();
-    public static HashMap<Integer, Integer> code2resMap = new HashMap<>();
-    public static HashMap<String, String[]> server2ipMap = new HashMap<>();
+    public static Map<String, Integer> info2resMap = new HashMap<>();
+    public static Map<String, String> info2interfaceMap = new HashMap<>();
+    public static Map<String, Integer> method2resMap = new HashMap<>();
+    public static Map<Integer, Integer> code2resMap = new HashMap<>();
+    public static Map<String, String[]> server2ipMap = new HashMap<>();
 
     private SharedPreferences preferences;
     private SharedPreferences.Editor preferenceEditor;
