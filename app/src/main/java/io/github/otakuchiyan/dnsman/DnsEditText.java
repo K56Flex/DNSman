@@ -6,7 +6,6 @@ import android.preference.PreferenceManager;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;

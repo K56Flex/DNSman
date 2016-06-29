@@ -15,13 +15,9 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.provider.Settings;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
-
-import eu.chainfire.libsuperuser.Shell;
 
 public final class NativeCommandUtils implements ValueConstants{
     private NativeCommandUtils(){

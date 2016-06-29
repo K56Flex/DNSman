@@ -1,10 +1,6 @@
 package io.github.otakuchiyan.dnsman;
 
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-
-import java.util.HashMap;
-import java.lang.Integer;
 
 public interface ValueConstants {
     int[] NET_TYPE_LIST = {
