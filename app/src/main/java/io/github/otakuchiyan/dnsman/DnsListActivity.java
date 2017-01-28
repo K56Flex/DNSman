@@ -142,7 +142,7 @@ public class DnsListActivity extends ListActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String dns = dnsEditText.getText().toString();
-                if (!dns.equals("") &&
+                if (!"".equals(dns) &&
                         (IPChecker.IPv4Checker(dns)
                                 || IPChecker.IPv6Checker(dns))) {
                     adapter.add(dns);
@@ -168,7 +168,7 @@ public class DnsListActivity extends ListActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String dns = dnsEditText.getText().toString();
-                if (!dns.equals("") &&
+                if (!"".equals(dns) &&
                         (IPChecker.IPv4Checker(dns)
                                 || IPChecker.IPv6Checker(dns))) {
                     adapter.add(dns);

@@ -75,7 +75,7 @@ public class DnsEditActivity extends Activity {
         dnsEntry[0] = dns1.getText().toString();
         dnsEntry[1] = dns2.getText().toString();
 
-        if(dnsEntry[0].equals("") && dnsEntry[1].equals("")){
+        if("".equals(dnsEntry[0]) && "".equals(dnsEntry[1])){
             Toast.makeText(this, R.string.toast_no_dns, Toast.LENGTH_SHORT).show();
             return;
         }
