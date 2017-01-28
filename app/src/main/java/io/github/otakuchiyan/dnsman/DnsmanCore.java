@@ -1,21 +1,13 @@
 package io.github.otakuchiyan.dnsman;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Build;
 import android.preference.PreferenceManager;
-
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 public class DnsmanCore implements ValueConstants{
     public static List<NetworkInfo> supportedNetInfoList = new ArrayList<>();
